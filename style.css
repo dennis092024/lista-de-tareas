@@ -1,0 +1,97 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* Alinea al inicio para que no esté pegado al centro verƟcal */
+    min-height: 100vh;
+    margin: 20px; /* Un poco de margen para que no esté pegado a los bordes */ 
+    color: #333;
+}
+.container{
+    background-color: #ffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+h1{
+    color: #4CAF50;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+}
+.input-section{
+    display: flex;
+    margin-bottom: 25px;
+    gap: 10px;  /* Espacio entre el input y el botón */
+}
+#taskInput{
+    flex-grow: 1; /* Hace que el input ocupe el espacio restante */
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s;
+}
+#taskInput:focus{
+    border-color:  #4CAF50;
+}
+#addTaskBtn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+#addTaskBtn:hover{
+    background-color: #45a049;
+}
+#taskList{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#taskList li{
+    background-color:  #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    border: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+#taskList li.completed{
+    background-color: #e0ffe0; /* Color más claro para tareas completadas */
+    text-decoration: line-through;
+    color: #888; 
+}
+#taskList li button{
+    background-color: #f44336; /* Rojo para eliminar */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+#taskList li:hover{
+    background-color: #da190b; 
+}
+
+/* Estilo para el texto de la tarea, para que ocupe el espacio */
+
+#taskList li span{
+    flex-grow: 1;
+    text-align: left;
+    cursor: pointer; /* Para indicar que se puede hacer clic para marcar/desmarcar */
+}
